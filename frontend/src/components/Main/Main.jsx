@@ -70,7 +70,7 @@ export default function Main({
         {isRender ? (
           cards.map((card) => (
             <Card
-              key={card._id}
+              key={card._id} 
               card={card}
               onCardClick={handleCardClick}
               onCardLike={onCardLike}

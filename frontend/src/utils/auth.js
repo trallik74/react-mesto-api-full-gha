@@ -1,4 +1,4 @@
-export const BASE_URL = "https://auth.nomoreparties.co";
+export const BASE_URL = "http://localhost:3000";
 
 function getErrorMessage(res) {
   return res.json().then((err) => {
@@ -42,6 +42,7 @@ export const authorize = (password, email) => {
 };
 
 export const checkToken = (token) => {
+  console.log(localStorage);
   return fetch(`${BASE_URL}/users/me`, {
     method: "GET",
     headers: {

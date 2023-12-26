@@ -22,6 +22,7 @@ export default function Login({ setTooltipData, handleLogin, setEmail }) {
     setIsLoading(true);
     authorize(values["password"], values["email"])
       .then((res) => {
+        console.log(res);
         if (res.token) {
           localStorage.setItem("jwt", res.token);
           handleLogin();

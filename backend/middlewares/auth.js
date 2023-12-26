@@ -1,7 +1,7 @@
 const { verifyWebToken } = require('../utils/jwt');
 const UnauthorizedError = require('../exeptions/unauthorized-error');
 
-const auth = async (req, res, next) => {
+const auth = (req, res, next) => {
   let token = req.headers.authorization;
   if (!token) {
     return next(new UnauthorizedError('Необходима авторизация'));

@@ -1,10 +1,10 @@
 class Api {
-  constructor({ url, header }) {
-    this._url = url;
-    this._header = header;
+  constructor() {
+    this._url = "http://localhost:3000";
   }
 
   _sendRequest(url, options) {
+    console.log(options);
     return fetch(url, options).then((response) => {
       if (response.ok) {
         return response.json();
@@ -17,21 +17,30 @@ class Api {
   getCardsList() {
     return this._sendRequest(`${this._url}/cards`, {
       method: "GET",
-      headers: this._header,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`
+      },
     });
   }
 
   getUserInfo() {
     return this._sendRequest(`${this._url}/users/me`, {
       method: "GET",
-      headers: this._header,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`
+      },
     });
   }
 
   updateUserInfo({ name, about }) {
     return this._sendRequest(`${this._url}/users/me`, {
       method: "PATCH",
-      headers: this._header,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`
+      },
       body: JSON.stringify({ name, about }),
     });
   }
@@ -39,7 +48,10 @@ class Api {
   createCard({ name, link }) {
     return this._sendRequest(`${this._url}/cards`, {
       method: "POST",
-      headers: this._header,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`
+      },
       body: JSON.stringify({ name, link }),
     });
   }
@@ -55,39 +67,43 @@ class Api {
   deleteCard(id) {
     return this._sendRequest(`${this._url}/cards/${id}`, {
       method: "DELETE",
-      headers: this._header,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`
+      },
     });
   }
 
   _likeCard(id) {
     return this._sendRequest(`${this._url}/cards/${id}/likes`, {
       method: "PUT",
-      headers: this._header,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`
+      },
     });
   }
 
   _removeLikeFromCard(id) {
     return this._sendRequest(`${this._url}/cards/${id}/likes`, {
       method: "DELETE",
-      headers: this._header,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`
+      },
     });
   }
 
   changeAvatar(avatar) {
     return this._sendRequest(`${this._url}/users/me/avatar`, {
       method: "PATCH",
-      headers: this._header,
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`
+      },
       body: JSON.stringify({ avatar }),
     });
   }
 }
 
-const optionsApi = {
-  url: "https://mesto.nomoreparties.co/v1/cohort-75",
-  header: {
-    "Content-Type": "application/json",
-    authorization: "812a01a3-2950-48a6-a5f0-d81cd717d41e",
-  },
-};
-
-export const api = new Api(optionsApi);
+export const api = new Api();

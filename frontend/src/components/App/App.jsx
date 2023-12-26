@@ -39,7 +39,7 @@ export default function App() {
           if (res) {
             setIsLoggedIn(true);
             navigate("/", { replace: true });
-            setEmail(res.data.email);
+            setEmail(res.email);
           }
         })
         .catch((err) => {

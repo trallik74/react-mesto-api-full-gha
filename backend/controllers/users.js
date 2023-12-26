@@ -100,7 +100,7 @@ const loginUser = (req, res, next) => {
         if (!isMatch) {
           return next(new UnauthorizedError('Неправильный email или пароль'));
         }
-        return res.status(HTTP_STATUS_OK).send({ jwt: generateWebToken(user._id) });
+        return res.status(HTTP_STATUS_OK).send({ token: generateWebToken(user._id) });
       });
     })
     .catch(next);
