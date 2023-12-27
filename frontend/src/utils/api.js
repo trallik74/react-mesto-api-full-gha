@@ -1,6 +1,6 @@
 class Api {
   constructor() {
-    this._url = "http://localhost:3000";
+    this._url = "api.trallik-mesto.nomoredomainsmonster.ru";
   }
 
   _sendRequest(url, options) {

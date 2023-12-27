@@ -1,4 +1,4 @@
-const allowedCors = ['http://localhost:3000', 'http://localhost:3001'];
+const allowedCors = ['http://localhost:3000', 'http://localhost:3001', 'http://trallik-mesto.nomoredomainsmonster.ru/'];
 
 const cors = (req, res, next) => {
   const { method } = req;

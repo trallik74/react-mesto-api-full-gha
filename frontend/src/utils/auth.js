@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "api.trallik-mesto.nomoredomainsmonster.ru";
 
 function getErrorMessage(res) {
   return res.json().then((err) => {
