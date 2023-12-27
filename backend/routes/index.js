@@ -10,7 +10,11 @@ const { requestLogger, errorLogger } = require('../middlewares/logger');
 const NotFoundError = require('../exeptions/not-found-error');
 
 router.use(requestLogger);
-
+router.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 router.post('/signin', validateLoginUser, loginUser);
 router.post('/signup', valiateCreateUser, createUser);
 router.use(auth);

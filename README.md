@@ -5,12 +5,12 @@
   
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Адрес репозитория: https://github.com/...
+Адрес репозитория: https://github.com/trallik74/react-mesto-api-full-gha
 
 ## Ссылки на проект
 
-IP x.x.x.x
+IP 158.160.135.22
 
-Frontend https://...
+Frontend http://trallik-mesto.nomoredomainsmonster.ru/
 
-Backend https://...
+Backend http://api.trallik-mesto.nomoredomainsmonster.ru/
