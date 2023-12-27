@@ -4,7 +4,6 @@ class Api {
   }
 
   _sendRequest(url, options) {
-    console.log(options);
     return fetch(url, options).then((response) => {
       if (response.ok) {
         return response.json();

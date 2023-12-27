@@ -10,7 +10,6 @@ export default function Card({
   const currentUser = useContext(CurrentUserContext);
   const [isErrorLink, setIsErrorLink] = useState(false);
   const isOwn = card.owner._id === currentUser._id;
-  console.log(card.owner._id);
   const isLiked = card.likes.some((i) => i._id === currentUser._id);
   const cardLikeButtonClassName = isLiked
     ? "element__like-button element__like-button_active"
