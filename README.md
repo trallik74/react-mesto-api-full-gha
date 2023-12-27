@@ -11,6 +11,6 @@
 
 IP 158.160.135.22
 
-Frontend http://trallik-mesto.nomoredomainsmonster.ru/
+Frontend https://trallik-mesto.nomoredomainsmonster.ru/
 
-Backend http://api.trallik-mesto.nomoredomainsmonster.ru/
+Backend https://api.trallik-mesto.nomoredomainsmonster.ru/
