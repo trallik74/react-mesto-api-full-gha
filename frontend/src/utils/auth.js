@@ -1,4 +1,4 @@
-export const BASE_URL = "http://api.trallik-mesto.nomoredomainsmonster.ru";
+export const BASE_URL = "https://api.trallik-mesto.nomoredomainsmonster.ru";
 
 function getErrorMessage(res) {
   return res.json().then((err) => {
