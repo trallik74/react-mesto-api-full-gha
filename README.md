@@ -1,16 +1,24 @@
-[![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
+# Приложение фото галереи Mesto
 
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
-  
-Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
+Ссылка: https://trallik-mesto.nomoredomainsmonster.ru/
 
-Адрес репозитория: https://github.com/trallik74/react-mesto-api-full-gha
+Api: https://api.trallik-mesto.nomoredomainsmonster.ru/
+## Технологии
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-## Ссылки на проект
+## Что сделал
+- написал backend который отвечает за добавление/обновление/удаление карточек с фотографиям и хранение информации о пользователе, а так же его аутентификацию;
+- разработал логику приложения и интерфейс на React;
+- добавил маршрутизацию в приложение через React Router;
+- реализовал асинхронные запросы на сервер;
+- готовый проект задеплоил на облако и настроил веб-сервер;
 
-IP 158.160.135.22
+## Функционал
+- регистрация и авторизация пользователей
+- главная: операции с карточками и пользователями
+- вывод нотификаций пользователю
 
-Frontend https://trallik-mesto.nomoredomainsmonster.ru/
-
-Backend https://api.trallik-mesto.nomoredomainsmonster.ru/
